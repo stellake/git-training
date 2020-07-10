@@ -13,20 +13,20 @@ fun computeFibbonaciNumber(position: Int?, recursion: Boolean = false): Int {
         return computeNegativeFibbonachi(notNullPosition)
     }
     
-    var i = 1
-    var j = 1
+    var m = 1
+    var n = 1
 
     if (notNullPosition <= 2) return 1
 
 
     var currentPosition = 2
     while (currentPosition < notNullPosition) {
-        val temp = i
-        i = j
-        j += temp
+        val temp = m
+        m = n
+        n += temp
         currentPosition ++
     }
-    return j
+    return n
 }
 
 fun computeFibbonachiArray(start: Int, end: Int, efficient: Boolean = false): List<Int> {
